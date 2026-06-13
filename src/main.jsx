@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Analytics } from "@vercel/analytics/react"
 import './index.css'
 import App from './App.jsx'
+import NotFound from './components/NotFound.jsx'
 import Home from './pages/Home.jsx'
 import Staffers from './pages/Staffers.jsx'
 import Chat from './pages/Chat.jsx'
@@ -12,6 +13,7 @@ const router =  createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
